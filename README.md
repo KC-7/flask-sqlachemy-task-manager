@@ -70,12 +70,15 @@ The `delete_task` route (`@app.route("/delete_task/<int:task_id>")`) allows the 
 
 ## Models File
 
- The `models.py` file defines the database schema for the `Category` and `Task` models. The `Category` model includes an `id` field, a `category_name` field that is unique and cannot be null, and a `tasks` field that represents a one-to-many relationship with the `Task` model. The `Task` model includes an `id` field, a `task_name` field that is unique and cannot be null, a `task_description` field that cannot be null, an `is_urgent` field, which is a Boolean value indicating whether the task is urgent or not, a `due_date` field representing the due date of the task, and a `category_id` field that represents a many-to-one relationship with the `Category` model.
+The `models.py` file defines the database schema for the `Category` and `Task` models. 
 
-In addition to defining the fields for each model, the `models.py` file also includes the `repr` method for each model, which returns a string representation of the model object. This is useful for debugging and logging purposes, as well as for displaying model objects in templates.
+The `Category` model includes an `id` field, a unique `category_name` field that cannot be null, and a `tasks` field that represents a one-to-many relationship with the `Task` model. 
 
-Overall, the `models.py` file is essential for defining the structure of the database and the relationships between the `Category` and `Task` models. The file also provides a way to interact with the database through the Flask-SQLAlchemy ORM (Object-Relational Mapping), which allows for easy manipulation of database records using Python objects.
+The `Task` model includes an `id` field, a unique `task_name` field that cannot be null, a `task_description` field that cannot be null, an `is_urgent` Boolean field indicating task urgency, a `due_date` field representing the task's deadline, and a `category_id` field representing a many-to-one relationship with the `Category` model.
 
+`models.py` also includes the `repr` method for each model, which returns a string representation of the model object. This is useful for debugging, logging, and displaying model objects in templates.
+
+Overall, the `models.py` is essential for defining the database structure and relationships between the `Category` and `Task` models. It provides a way to interact with the database using the Flask-SQLAlchemy ORM (Object-Relational Mapping) for easy manipulation of database records using Python objects.
 
 ## Usage
 To use this app, follow these steps:
