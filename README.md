@@ -1,8 +1,20 @@
-# Flask Task Manager App
+# [Flask Task Manager App](https://kc-task-manager.herokuapp.com/add_task)
 This is a Flask-based task manager app that allows users to create, read, update, and delete tasks and categories. The app also allows users to view tasks by category.
 
   Link Link: https://kc-task-manager.herokuapp.com/add_task
 
+## Table of Contents
+
+- [Technology Stack](#technology-stack)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Routes File](#routes-file)
+- [Models File](#models-file)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+- [Credits](#credits)
 
 ## Technology Stack
 This app is built using the following technologies:
@@ -39,7 +51,7 @@ The app is structured as follows:
   - `templates folder`: contains the Jinja2 HTML templates that generate the app's webpages
 
 
-## `routes.py`
+## Routes File
 
  The Flask application has a home route (`@app.route("/")`) that retrieves all the tasks in the database and renders them in the `tasks.html` template using `render_template`. The `categories` route (`@app.route("/categories")`) retrieves all the categories in the database and renders them in the `categories.html` template using `render_template`.
 
@@ -56,7 +68,7 @@ The `edit_task` route (`@app.route("/edit_task/<int:task_id>", methods=["GET", "
 The `delete_task` route (`@app.route("/delete_task/<int:task_id>")`) allows the user to delete an existing task. The function retrieves the task to be deleted from the database session, deletes the task, and commits the changes to the database. The function then redirects the user to the `home` route.
 
 
-## `models.py`
+## Models File
 
  The `models.py` file defines the database schema for the `Category` and `Task` models. The `Category` model includes an `id` field, a `category_name` field that is unique and cannot be null, and a `tasks` field that represents a one-to-many relationship with the `Task` model. The `Task` model includes an `id` field, a `task_name` field that is unique and cannot be null, a `task_description` field that cannot be null, an `is_urgent` field, which is a Boolean value indicating whether the task is urgent or not, a `due_date` field representing the due date of the task, and a `category_id` field that represents a many-to-one relationship with the `Category` model.
 
@@ -103,5 +115,7 @@ This app is licensed under the MIT License.
 
 ## Credits
 - The app was created by following a Code Institute Walk Through Module as part of their Full Stack Developer Dimploma Course. 
+
+- The following sites were used as noted above: materializecss, Font Awesome, ElephantSQL, Heroku, etc. 
 
 - Please note that the README file was generated using an AI language model, ChatGPT(3.5), which has certain limitations and may contain inaccuracies. This tool was used to document the project for future reference. 
