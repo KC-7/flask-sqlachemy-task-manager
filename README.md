@@ -1,7 +1,7 @@
-# [Flask Task Manager App](https://kc-task-manager.herokuapp.com/add_task)
-This is a Flask-based task manager app that allows users to create, read, update, and delete tasks and categories. The app also allows users to view tasks by category.
+# [Flask Task Manager App](https://kc-task-manager.herokuapp.com)
+This is a Flask-based task manager app that allows users to create, read, update, and delete tasks and categories.
 
-  Link Link: https://kc-task-manager.herokuapp.com/add_task
+  Link Link: https://kc-task-manager.herokuapp.com
 
 ## Table of Contents
 
