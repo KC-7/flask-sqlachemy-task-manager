@@ -1,5 +1,5 @@
 # [Flask Task Manager App](https://kc-task-manager.herokuapp.com)
-This is a Flask-based task manager app that allows users to create, read, update, and delete tasks and categories.
+The Task Manager App is a web-based application built using Flask, SQLAlchemy, JavaScript, CSS, and HTML. It allows for user authentication and authorization, CRUD (Create, Read, Update, Delete) operations for tasks and categories, task filtering, and uses Materialize CSS for a clean & responsive UI, alongside Font Awesome icons for additional visual appeal.
 
   Link Link: https://kc-task-manager.herokuapp.com
 
@@ -40,6 +40,8 @@ The Flask Task Manager App has the following features:
 
 
 ## Project Structure
+The app is structured as `run.py`, the main Python file that initializes the Flask app and runs it, the `taskmanager` folder, which includes the `__init__.py` file that initializes the Flask Blueprint and the SQLAlchemy database, `models.py`, which defines the `Task` and `Category` SQLAlchemy models, and `routes.py`, which contains the app's URL routes and their corresponding view functions. It also includes the `static` folder, which contains the JS and CSS files used for styling and interactivity, and the `templates` folder, which contains the Jinja2 HTML templates that generate the app's webpages. 
+
 The app is structured as follows:
 
 - `run.py`: the main Python file that initializes the Flask app and runs it
